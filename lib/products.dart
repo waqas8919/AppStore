@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:storeapp_taks/ProductDetails.dart';
 import 'package:storeapp_taks/ProductStaw.dart';
+import 'package:storeapp_taks/history.dart';
 
 import 'package:storeapp_taks/hotel_app_theme.dart';
 
@@ -560,10 +561,10 @@ class _MyHomePageState extends State<ProductScreen> {
             children: <Widget>[
               GestureDetector(
                 onTap: () async {
-                  // await Navigator.push(
-                  //     context,
-                  //     new MaterialPageRoute(
-                  //         builder: (context) => ProductDetailPage()));
+                  await Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (context) => HistoryScreen()));
                 },
                 child: Container(
                   height: 40,

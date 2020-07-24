@@ -116,7 +116,6 @@ class _MyHomePageState extends State<MyHomePage> {
               SizedBox(
                 height: 15,
               ),
-             
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Container(
@@ -247,7 +246,6 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     )),
               ),
-             
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Container(

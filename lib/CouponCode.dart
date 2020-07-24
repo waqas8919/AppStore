@@ -50,6 +50,7 @@ class _MyHomePageState extends State<CouponCodeScreen> {
                   ],
                 ),
               ),
+            
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Container(
@@ -122,6 +123,7 @@ class _MyHomePageState extends State<CouponCodeScreen> {
                       ),
                     )),
               ),
+            
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Container(
