@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:storeapp_taks/hotel_app_theme.dart';
 import 'package:storeapp_taks/manage_shipping.dart';
@@ -6,18 +7,108 @@ void main() {
   runApp(MyApp());
 }
 
+// class MyApp extends StatelessWidget {
+//   // This widget is the root of your application.
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       theme: ThemeData(
+//         primarySwatch: Colors.blue,
+//         visualDensity: VisualDensity.adaptivePlatformDensity,
+//       ),
+//       home: MyHomePage(),
+//     );
+//   }
+// }
+
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        primarySwatch: Colors.amber,
+        primaryColor: defaultTargetPlatform == TargetPlatform.iOS
+            ? Colors.grey[50]
+            : null,
       ),
-      home: MyHomePage(),
+
+      home: HomePage(),
+      //     routes: <String, WidgetBuilder>{
+      //       "/a" : (BuildContext context) => NewPage("New Page")
+      // }
     );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.blueGrey[50],
+          elevation: 0.0,
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.sort,
+              size: 28,
+              color: Colors.black,
+            ),
+          ),
+        ),
+        drawer: Drawer(
+          child: ListView(
+            children: <Widget>[
+              UserAccountsDrawerHeader(
+                accountName: Text(
+                  "Ajay Sharma",
+                  style: TextStyle(color: Colors.black),
+                ),
+                accountEmail: Text(
+                  "ajasharma@gmail.com",
+                  style: TextStyle(color: Colors.black),
+                ),
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor:
+                      Theme.of(context).platform == TargetPlatform.iOS
+                          ? Colors.black
+                          : Colors.white,
+                  child: Text("A", style: TextStyle(fontSize: 24)),
+                ),
+              ),
+              ListTile(
+                trailing: Icon(Icons.arrow_upward),
+                title: Text("Page 1"),
+                onTap: () {
+                  Navigator.of(context).pop();
+
+                  // Navigator.of(context).pushNamed("/a");
+                },
+              ),
+              ListTile(
+                title: Text("Page 2"),
+                trailing: Icon(Icons.arrow_downward),
+                onTap: () {
+                  Navigator.of(context).pop();
+
+                  // Navigator.of(context).pushNamed("/a");
+                },
+              ),
+              Divider(),
+              ListTile(
+                title: Text("Close"),
+                trailing: Icon(Icons.close),
+                onTap: () => Navigator.of(context).pop(),
+              )
+            ],
+          ),
+        ),
+        body: MyHomePage());
   }
 }
 
@@ -35,7 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              getAppBarUI(),
+              //getAppBarUI(),
               SizedBox(
                 height: 20,
               ),

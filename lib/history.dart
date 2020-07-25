@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:storeapp_taks/Inbox.dart';
 
 import 'package:storeapp_taks/hotel_app_theme.dart';
 
@@ -42,75 +43,84 @@ class _MyHomePageState extends State<HistoryScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    Container(
-                      height: 200,
-                      width: 160,
-                      decoration: BoxDecoration(
-                          color: Colors.deepOrange[800],
-                          borderRadius: BorderRadius.all(Radius.circular(10))),
+                    GestureDetector(
+                      onTap: () async {
+                        await Navigator.push(
+                            context,
+                            new MaterialPageRoute(
+                                builder: (context) => InboxScreen()));
+                      },
                       child: Container(
-                        child: Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              Row(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                children: <Widget>[
-                                  new Container(
-                                      width: 40.0,
-                                      height: 40.0,
-                                      decoration: new BoxDecoration(
-                                          shape: BoxShape.circle,
-                                          image: new DecorationImage(
-                                              fit: BoxFit.fill,
-                                              image: new NetworkImage(
-                                                  "https://www.kindpng.com/picc/m/46-464088_hand-hands-dollar-sign-coin-dollar-sign-in.png")))),
-                                ],
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 10.0, left: 10.0),
-                                child: Row(
+                        height: 200,
+                        width: 160,
+                        decoration: BoxDecoration(
+                            color: Colors.deepOrange[800],
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(10))),
+                        child: Container(
+                          child: Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Row(
                                   mainAxisAlignment: MainAxisAlignment.start,
                                   children: <Widget>[
-                                    Text(
-                                      'Total Earnings',
-                                      style: TextStyle(
-                                          fontSize: 12, color: Colors.white),
-                                    )
+                                    new Container(
+                                        width: 40.0,
+                                        height: 40.0,
+                                        decoration: new BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            image: new DecorationImage(
+                                                fit: BoxFit.fill,
+                                                image: new NetworkImage(
+                                                    "https://www.kindpng.com/picc/m/46-464088_hand-hands-dollar-sign-coin-dollar-sign-in.png")))),
                                   ],
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 15.0, left: 10.0),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      '\$ 2500.95',
-                                      style: TextStyle(
-                                          fontSize: 18, color: Colors.white),
-                                    )
-                                  ],
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 10.0, left: 10.0),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        'Total Earnings',
+                                        style: TextStyle(
+                                            fontSize: 12, color: Colors.white),
+                                      )
+                                    ],
+                                  ),
                                 ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.only(
-                                    top: 40.0, left: 10.0),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: <Widget>[
-                                    Text(
-                                      'USD',
-                                      style: TextStyle(
-                                          fontSize: 18, color: Colors.white),
-                                    )
-                                  ],
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 15.0, left: 10.0),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        '\$ 2500.95',
+                                        style: TextStyle(
+                                            fontSize: 18, color: Colors.white),
+                                      )
+                                    ],
+                                  ),
                                 ),
-                              ),
-                            ],
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      top: 40.0, left: 10.0),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: <Widget>[
+                                      Text(
+                                        'USD',
+                                        style: TextStyle(
+                                            fontSize: 18, color: Colors.white),
+                                      )
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
                       ),
