@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:storeapp_taks/Utils/MyDrawer.dart';
 import 'package:storeapp_taks/hotel_app_theme.dart';
 import 'package:storeapp_taks/manage_shipping.dart';
 
@@ -44,68 +45,24 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatelessWidget {
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        key: _scaffoldKey,
+        drawer: MyDrawer(),
         appBar: AppBar(
           backgroundColor: Colors.blueGrey[50],
           elevation: 0.0,
           leading: GestureDetector(
             onTap: () {
-              Navigator.pop(context);
+              _scaffoldKey.currentState.openDrawer();
             },
             child: Icon(
               Icons.sort,
               size: 28,
               color: Colors.black,
             ),
-          ),
-        ),
-        drawer: Drawer(
-          child: ListView(
-            children: <Widget>[
-              UserAccountsDrawerHeader(
-                accountName: Text(
-                  "Ajay Sharma",
-                  style: TextStyle(color: Colors.black),
-                ),
-                accountEmail: Text(
-                  "ajasharma@gmail.com",
-                  style: TextStyle(color: Colors.black),
-                ),
-                currentAccountPicture: CircleAvatar(
-                  backgroundColor:
-                      Theme.of(context).platform == TargetPlatform.iOS
-                          ? Colors.black
-                          : Colors.white,
-                  child: Text("A", style: TextStyle(fontSize: 24)),
-                ),
-              ),
-              ListTile(
-                trailing: Icon(Icons.arrow_upward),
-                title: Text("Page 1"),
-                onTap: () {
-                  Navigator.of(context).pop();
-
-                  // Navigator.of(context).pushNamed("/a");
-                },
-              ),
-              ListTile(
-                title: Text("Page 2"),
-                trailing: Icon(Icons.arrow_downward),
-                onTap: () {
-                  Navigator.of(context).pop();
-
-                  // Navigator.of(context).pushNamed("/a");
-                },
-              ),
-              Divider(),
-              ListTile(
-                title: Text("Close"),
-                trailing: Icon(Icons.close),
-                onTap: () => Navigator.of(context).pop(),
-              )
-            ],
           ),
         ),
         body: MyHomePage());

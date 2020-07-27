@@ -21,10 +21,24 @@ class _MyHomePageState extends State<ProductScreen> {
     return Container(
       child: Scaffold(
         backgroundColor: Colors.blueGrey[50],
+        appBar: AppBar(
+          backgroundColor: HotelAppTheme.buildLightTheme().backgroundColor,
+          elevation: 0.0,
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back,
+              size: 28,
+              color: Colors.black,
+            ),
+          ),
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              getAppBarUI(),
+              //getAppBarUI(),
               SizedBox(
                 height: 20,
               ),

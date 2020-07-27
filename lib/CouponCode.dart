@@ -18,10 +18,30 @@ class _MyHomePageState extends State<CouponCodeScreen> {
     return Container(
       child: Scaffold(
         backgroundColor: Colors.blueGrey[50],
+        appBar: AppBar(
+          backgroundColor: HotelAppTheme.buildLightTheme().backgroundColor,
+          elevation: 0.0,
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back,
+              size: 28,
+              color: Colors.black,
+            ),
+          ),
+          actions: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(right: 15.0),
+              child: Center(child: Icon(Icons.add)),
+            )
+          ],
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              getAppBarUI(),
+              //getAppBarUI(),
               SizedBox(
                 height: 20,
               ),
@@ -50,7 +70,6 @@ class _MyHomePageState extends State<CouponCodeScreen> {
                   ],
                 ),
               ),
-            
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Container(
@@ -123,7 +142,6 @@ class _MyHomePageState extends State<CouponCodeScreen> {
                       ),
                     )),
               ),
-            
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Container(

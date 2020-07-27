@@ -14,10 +14,24 @@ class _MyHomePageState extends State<AddDiscountCodePage> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: HotelAppTheme.buildLightTheme().backgroundColor,
+          elevation: 0.0,
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back,
+              size: 28,
+              color: Colors.black,
+            ),
+          ),
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              getAppBarUI(),
+              //getAppBarUI(),
               SizedBox(
                 height: 20,
               ),
@@ -254,7 +268,6 @@ class _MyHomePageState extends State<AddDiscountCodePage> {
                       hintStyle: TextStyle(color: Colors.black)),
                 ),
               ),
-           
               Padding(
                 padding: const EdgeInsets.only(left: 20, right: 20, top: 10),
                 child: Row(
@@ -281,7 +294,6 @@ class _MyHomePageState extends State<AddDiscountCodePage> {
                   ],
                 ),
               )
-           
             ],
           ),
         ),

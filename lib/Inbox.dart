@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:storeapp_taks/chatscreen.dart';
 import 'package:storeapp_taks/discountcode.dart';
 import 'package:storeapp_taks/hotel_app_theme.dart';
 
@@ -230,7 +231,7 @@ class _MyHomePageState extends State<InboxScreen> {
                   await Navigator.push(
                       context,
                       new MaterialPageRoute(
-                          builder: (context) => DiscountCodePage()));
+                          builder: (context) => MyChatScreen()));
                 },
                 child: Container(
                   height: 40,

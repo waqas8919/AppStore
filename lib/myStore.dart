@@ -18,10 +18,30 @@ class _MyHomePageState extends State<MyStoreScreen> {
     return Container(
       child: Scaffold(
         backgroundColor: Colors.blueGrey[50],
+        appBar: AppBar(
+          backgroundColor: HotelAppTheme.buildLightTheme().backgroundColor,
+          elevation: 0.0,
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.sort,
+              size: 28,
+              color: Colors.black,
+            ),
+          ),
+          actions: <Widget>[
+            Padding(
+              padding: const EdgeInsets.only(right: 15.0),
+              child: Center(child: Icon(Icons.add)),
+            )
+          ],
+        ),
         body: SingleChildScrollView(
           child: Column(
             children: <Widget>[
-              getAppBarUI(),
+              //getAppBarUI(),
               SizedBox(
                 height: 20,
               ),
@@ -243,7 +263,7 @@ class _MyHomePageState extends State<MyStoreScreen> {
               SizedBox(
                 height: 10,
               ),
-           
+
               Padding(
                 padding: const EdgeInsets.only(left: 18.0, right: 18.0),
                 child: GestureDetector(
@@ -287,7 +307,6 @@ class _MyHomePageState extends State<MyStoreScreen> {
                       )),
                 ),
               ),
-           
             ],
           ),
         ),

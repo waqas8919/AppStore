@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
+import 'package:storeapp_taks/hotel_app_theme.dart';
 import 'package:storeapp_taks/Utils/Message.dart';
 
 class MyChatScreen extends StatefulWidget {
@@ -27,11 +28,19 @@ class _MyChatState extends State<MyChatScreen> {
     String formattedDate = DateFormat('yyyy-MM-dd hh:mm').format(time);
 
     return new Scaffold(
-        appBar: new AppBar(
-          title: const Text(
-            'Chat App',
-            style: TextStyle(color: Colors.red),
-            textAlign: TextAlign.center,
+        appBar: AppBar(
+          backgroundColor: HotelAppTheme.buildLightTheme().backgroundColor,
+          elevation: 0.0,
+          title: Text('Alex'),
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back,
+              size: 28,
+              color: Colors.black,
+            ),
           ),
         ),
         body: new Container(
@@ -58,29 +67,19 @@ class _MyChatState extends State<MyChatScreen> {
                           data: new IconThemeData(
                               color: Theme.of(context).accentColor),
                           child: new Container(
-                            margin: const EdgeInsets.symmetric(horizontal: 2.0),
+                            margin:
+                                const EdgeInsets.symmetric(horizontal: 10.0),
                             child: new Row(
                               children: <Widget>[
                                 //left send button
-
-                                new Container(
-                                  width: 48.0,
-                                  height: 48.0,
-                                  child: new IconButton(
-                                      icon: Image.asset(
-                                          "assets/images/send_in.png"),
-                                      onPressed: () => _sendMsg(
-                                          _textController.text,
-                                          'left',
-                                          formattedDate)),
-                                ),
 
                                 //Enter Text message here
                                 new Flexible(
                                   child: new TextField(
                                     controller: _textController,
                                     decoration: new InputDecoration.collapsed(
-                                        hintText: "Enter message"),
+                                        hintText: "Write a message"),
+                                    style: TextStyle(fontSize: 18),
                                   ),
                                 ),
 
@@ -91,13 +90,19 @@ class _MyChatState extends State<MyChatScreen> {
                                       new EdgeInsets.symmetric(horizontal: 2.0),
                                   width: 48.0,
                                   height: 48.0,
-                                  child: new IconButton(
-                                      icon: Image.asset(
-                                          "assets/images/send_out.png"),
-                                      onPressed: () => _sendMsg(
-                                          _textController.text,
-                                          'right',
-                                          formattedDate)),
+                                  child: Center(
+                                    child: GestureDetector(
+                                      onTap: () {
+                                        _sendMsg(_textController.text, 'right',
+                                            formattedDate);
+                                      },
+                                      child: Text(
+                                        'Send',
+                                        style: TextStyle(
+                                            color: Colors.red, fontSize: 18),
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ],
                             ),
