@@ -88,7 +88,7 @@ class _MyHomePageState extends State<ProductScreen> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 100,
+                      height: 120,
                       child: Container(
                         alignment: Alignment.center,
                         padding: EdgeInsets.only(
@@ -176,7 +176,7 @@ class _MyHomePageState extends State<ProductScreen> {
                                                   textAlign: TextAlign.left,
                                                 ),
                                                 Text(
-                                                  "Buyers has confirmerd order received",
+                                                  "Buyers has confirmerd",
                                                   style: TextStyle(
                                                       color: Colors.black54),
                                                   textAlign: TextAlign.left,
@@ -211,7 +211,7 @@ class _MyHomePageState extends State<ProductScreen> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 100,
+                      height: 120,
                       child: Container(
                         alignment: Alignment.center,
                         padding: EdgeInsets.only(
@@ -299,7 +299,7 @@ class _MyHomePageState extends State<ProductScreen> {
                                                   textAlign: TextAlign.left,
                                                 ),
                                                 Text(
-                                                  "Buyers has confirmerd order received",
+                                                  "Buyers has confirmerd",
                                                   style: TextStyle(
                                                       color: Colors.black54),
                                                   textAlign: TextAlign.left,
@@ -334,7 +334,7 @@ class _MyHomePageState extends State<ProductScreen> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 100,
+                      height: 120,
                       child: Container(
                         alignment: Alignment.center,
                         padding: EdgeInsets.only(
@@ -422,7 +422,7 @@ class _MyHomePageState extends State<ProductScreen> {
                                                   textAlign: TextAlign.left,
                                                 ),
                                                 Text(
-                                                  "Buyers has confirmerd order received",
+                                                  "Buyers has confirmerd",
                                                   style: TextStyle(
                                                       color: Colors.black54),
                                                   textAlign: TextAlign.left,
@@ -457,7 +457,7 @@ class _MyHomePageState extends State<ProductScreen> {
                     },
                     child: Container(
                       width: double.infinity,
-                      height: 100,
+                      height: 120,
                       child: Container(
                         alignment: Alignment.center,
                         padding: EdgeInsets.only(
@@ -545,7 +545,7 @@ class _MyHomePageState extends State<ProductScreen> {
                                                   textAlign: TextAlign.left,
                                                 ),
                                                 Text(
-                                                  "Buyers has confirmerd order received",
+                                                  "Buyers has confirmerd",
                                                   style: TextStyle(
                                                       color: Colors.black54),
                                                   textAlign: TextAlign.left,

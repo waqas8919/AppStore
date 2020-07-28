@@ -42,7 +42,7 @@ class _MyHomePageState extends State<DiscountCodePage> {
                   children: <Widget>[
                     Text(
                       'Edit Discount Code',
-                      style: TextStyle(fontSize: 35),
+                      style: TextStyle(fontSize: 30),
                     )
                   ],
                 ),

@@ -15,211 +15,213 @@ class _MyHomePageState extends State<InboxScreen> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-        body: Column(
-          children: <Widget>[
-            getAppBarUI(),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Inbox',
-                    style: TextStyle(fontSize: 35),
-                  )
-                ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              getAppBarUI(),
+              SizedBox(
+                height: 20,
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, top: 3),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Messages from your customers will appears here',
-                    style: TextStyle(fontSize: 15, color: Colors.grey),
-                  )
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Inbox',
+                      style: TextStyle(fontSize: 35),
+                    )
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 15,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Row(
-                children: <Widget>[
-                  new Container(
-                      width: 90.0,
-                      height: 90.0,
-                      decoration: new BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: new DecorationImage(
-                              fit: BoxFit.fill,
-                              image: new NetworkImage(
-                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTec9MHEWqcyuNPy2rPKccy3wPVighgh4tPEw&usqp=CAU")))),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'Jack Darcey',
-                            style: TextStyle(color: Colors.black54),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'We are full at present.',
-                            style: TextStyle(color: Colors.black54),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 3),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Messages from your customers',
+                      style: TextStyle(fontSize: 15, color: Colors.grey),
+                    )
+                  ],
+                ),
               ),
-            ),
-            Divider(
-              height: 15,
-              color: Colors.black54,
-              thickness: 1,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Row(
-                children: <Widget>[
-                  new Container(
-                      width: 90.0,
-                      height: 90.0,
-                      decoration: new BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: new DecorationImage(
-                              fit: BoxFit.fill,
-                              image: new NetworkImage(
-                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTec9MHEWqcyuNPy2rPKccy3wPVighgh4tPEw&usqp=CAU")))),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'Jack Darcey',
-                            style: TextStyle(color: Colors.black54),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'We are full at present.',
-                            style: TextStyle(color: Colors.black54),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+              SizedBox(
+                height: 15,
               ),
-            ),
-            Divider(height: 15, color: Colors.black54, thickness: 1),
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Row(
-                children: <Widget>[
-                  new Container(
-                      width: 90.0,
-                      height: 90.0,
-                      decoration: new BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: new DecorationImage(
-                              fit: BoxFit.fill,
-                              image: new NetworkImage(
-                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTec9MHEWqcyuNPy2rPKccy3wPVighgh4tPEw&usqp=CAU")))),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'Jack Darcey',
-                            style: TextStyle(color: Colors.black54),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'We are full at present.',
-                            style: TextStyle(color: Colors.black54),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  children: <Widget>[
+                    new Container(
+                        width: 90.0,
+                        height: 90.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTec9MHEWqcyuNPy2rPKccy3wPVighgh4tPEw&usqp=CAU")))),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'Jack Darcey',
+                              style: TextStyle(color: Colors.black54),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'We are full at present.',
+                              style: TextStyle(color: Colors.black54),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
               ),
-            ),
-            Divider(height: 15, color: Colors.black54, thickness: 1),
-            Padding(
-              padding: const EdgeInsets.all(15.0),
-              child: Row(
-                children: <Widget>[
-                  new Container(
-                      width: 90.0,
-                      height: 90.0,
-                      decoration: new BoxDecoration(
-                          shape: BoxShape.circle,
-                          image: new DecorationImage(
-                              fit: BoxFit.fill,
-                              image: new NetworkImage(
-                                  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTec9MHEWqcyuNPy2rPKccy3wPVighgh4tPEw&usqp=CAU")))),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'Jack Darcey',
-                            style: TextStyle(color: Colors.black54),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'We are full at present.',
-                            style: TextStyle(color: Colors.black54),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
+              Divider(
+                height: 15,
+                color: Colors.black54,
+                thickness: 1,
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  children: <Widget>[
+                    new Container(
+                        width: 90.0,
+                        height: 90.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTec9MHEWqcyuNPy2rPKccy3wPVighgh4tPEw&usqp=CAU")))),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'Jack Darcey',
+                              style: TextStyle(color: Colors.black54),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'We are full at present.',
+                              style: TextStyle(color: Colors.black54),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Divider(height: 15, color: Colors.black54, thickness: 1),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  children: <Widget>[
+                    new Container(
+                        width: 90.0,
+                        height: 90.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTec9MHEWqcyuNPy2rPKccy3wPVighgh4tPEw&usqp=CAU")))),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'Jack Darcey',
+                              style: TextStyle(color: Colors.black54),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'We are full at present.',
+                              style: TextStyle(color: Colors.black54),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Divider(height: 15, color: Colors.black54, thickness: 1),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
+                child: Row(
+                  children: <Widget>[
+                    new Container(
+                        width: 90.0,
+                        height: 90.0,
+                        decoration: new BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: new DecorationImage(
+                                fit: BoxFit.fill,
+                                image: new NetworkImage(
+                                    "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTec9MHEWqcyuNPy2rPKccy3wPVighgh4tPEw&usqp=CAU")))),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: <Widget>[
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'Jack Darcey',
+                              style: TextStyle(color: Colors.black54),
+                            ),
+                          ],
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'We are full at present.',
+                              style: TextStyle(color: Colors.black54),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.only(left: 20, right: 25, bottom: 20),

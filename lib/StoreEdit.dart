@@ -19,136 +19,152 @@ class _MyHomePageState extends State<StoreEditPage> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-        body: Column(
-          children: <Widget>[
-            getAppBarUI(),
-            SizedBox(
-              height: 20,
+        appBar: AppBar(
+          backgroundColor: HotelAppTheme.buildLightTheme().backgroundColor,
+          elevation: 0.0,
+          leading: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: Icon(
+              Icons.arrow_back,
+              size: 28,
+              color: Colors.black,
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Edit your store',
-                    style: TextStyle(fontSize: 35),
-                  )
-                ],
+          ),
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              //getAppBarUI(),
+              SizedBox(
+                height: 20,
               ),
-            ),
-            SizedBox(
-              height: 25,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
-              child: TextField(
-                controller: publishcontroller,
-                textAlignVertical: TextAlignVertical.bottom,
-                onChanged: (String value) {
-                  publish = true;
-                },
-                decoration: InputDecoration(
-                  hintStyle: TextStyle(color: Colors.black),
-                  hintText: 'Title And Description',
-                  suffixIcon: IconButton(
-                      icon: Icon(Icons.keyboard_arrow_right),
-                      iconSize: 17,
-                      onPressed: () {}),
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Edit your store',
+                      style: TextStyle(fontSize: 35),
+                    )
+                  ],
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
-              child: TextField(
-                controller: publishcontroller,
-                textAlignVertical: TextAlignVertical.bottom,
-                onChanged: (String value) {
-                  publish = true;
-                },
-                decoration: InputDecoration(
-                  hintStyle: TextStyle(color: Colors.black),
-                  hintText: 'Logo and cover photo',
-                  suffixIcon: IconButton(
-                      icon: Icon(Icons.keyboard_arrow_right),
-                      iconSize: 17,
-                      onPressed: () {}),
+              SizedBox(
+                height: 25,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                child: TextField(
+                  controller: publishcontroller,
+                  textAlignVertical: TextAlignVertical.bottom,
+                  onChanged: (String value) {
+                    publish = true;
+                  },
+                  decoration: InputDecoration(
+                    hintStyle: TextStyle(color: Colors.black),
+                    hintText: 'Title And Description',
+                    suffixIcon: IconButton(
+                        icon: Icon(Icons.keyboard_arrow_right),
+                        iconSize: 17,
+                        onPressed: () {}),
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
-              child: TextField(
-                controller: publishcontroller,
-                textAlignVertical: TextAlignVertical.bottom,
-                onChanged: (String value) {
-                  publish = true;
-                },
-                decoration: InputDecoration(
-                  hintStyle: TextStyle(color: Colors.black),
-                  hintText: 'Manage shipping',
-                  suffixIcon: IconButton(
-                      icon: Icon(Icons.keyboard_arrow_right),
-                      iconSize: 17,
-                      onPressed: () {}),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                child: TextField(
+                  controller: publishcontroller,
+                  textAlignVertical: TextAlignVertical.bottom,
+                  onChanged: (String value) {
+                    publish = true;
+                  },
+                  decoration: InputDecoration(
+                    hintStyle: TextStyle(color: Colors.black),
+                    hintText: 'Logo and cover photo',
+                    suffixIcon: IconButton(
+                        icon: Icon(Icons.keyboard_arrow_right),
+                        iconSize: 17,
+                        onPressed: () {}),
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
-              child: TextField(
-                controller: publishcontroller,
-                textAlignVertical: TextAlignVertical.bottom,
-                onChanged: (String value) {
-                  publish = true;
-                },
-                decoration: InputDecoration(
-                  hintStyle: TextStyle(color: Colors.black),
-                  hintText: 'Location',
-                  suffixIcon: IconButton(
-                      icon: Icon(Icons.keyboard_arrow_right),
-                      iconSize: 17,
-                      onPressed: () {}),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                child: TextField(
+                  controller: publishcontroller,
+                  textAlignVertical: TextAlignVertical.bottom,
+                  onChanged: (String value) {
+                    publish = true;
+                  },
+                  decoration: InputDecoration(
+                    hintStyle: TextStyle(color: Colors.black),
+                    hintText: 'Manage shipping',
+                    suffixIcon: IconButton(
+                        icon: Icon(Icons.keyboard_arrow_right),
+                        iconSize: 17,
+                        onPressed: () {}),
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
-              child: TextField(
-                controller: publishcontroller,
-                textAlignVertical: TextAlignVertical.bottom,
-                onChanged: (String value) {
-                  publish = true;
-                },
-                decoration: InputDecoration(
-                  hintStyle: TextStyle(color: Colors.black),
-                  hintText: 'Coupon codes',
-                  suffixIcon: IconButton(
-                      icon: Icon(Icons.keyboard_arrow_right),
-                      iconSize: 17,
-                      onPressed: () {}),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                child: TextField(
+                  controller: publishcontroller,
+                  textAlignVertical: TextAlignVertical.bottom,
+                  onChanged: (String value) {
+                    publish = true;
+                  },
+                  decoration: InputDecoration(
+                    hintStyle: TextStyle(color: Colors.black),
+                    hintText: 'Location',
+                    suffixIcon: IconButton(
+                        icon: Icon(Icons.keyboard_arrow_right),
+                        iconSize: 17,
+                        onPressed: () {}),
+                  ),
                 ),
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
-              child: TextField(
-                controller: publishcontroller,
-                textAlignVertical: TextAlignVertical.bottom,
-                onChanged: (String value) {
-                  publish = true;
-                },
-                decoration: InputDecoration(
-                  hintStyle: TextStyle(color: Colors.black),
-                  hintText: 'Products',
-                  suffixIcon: IconButton(
-                      icon: Icon(Icons.keyboard_arrow_right),
-                      iconSize: 17,
-                      onPressed: () {}),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                child: TextField(
+                  controller: publishcontroller,
+                  textAlignVertical: TextAlignVertical.bottom,
+                  onChanged: (String value) {
+                    publish = true;
+                  },
+                  decoration: InputDecoration(
+                    hintStyle: TextStyle(color: Colors.black),
+                    hintText: 'Coupon codes',
+                    suffixIcon: IconButton(
+                        icon: Icon(Icons.keyboard_arrow_right),
+                        iconSize: 17,
+                        onPressed: () {}),
+                  ),
                 ),
               ),
-            ),
-          ],
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, bottom: 20),
+                child: TextField(
+                  controller: publishcontroller,
+                  textAlignVertical: TextAlignVertical.bottom,
+                  onChanged: (String value) {
+                    publish = true;
+                  },
+                  decoration: InputDecoration(
+                    hintStyle: TextStyle(color: Colors.black),
+                    hintText: 'Products',
+                    suffixIcon: IconButton(
+                        icon: Icon(Icons.keyboard_arrow_right),
+                        iconSize: 17,
+                        onPressed: () {}),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.only(left: 20, right: 25, bottom: 20),

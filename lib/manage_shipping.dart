@@ -27,7 +27,7 @@ class _MyHomePageState extends State<ManageShipping> {
                   children: <Widget>[
                     Text(
                       'MANAGE SHIPPING',
-                      style: TextStyle(fontSize: 35),
+                      style: TextStyle(fontSize: 30),
                     )
                   ],
                 ),

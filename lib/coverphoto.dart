@@ -1,7 +1,6 @@
 import 'package:dashed_container/dashed_container.dart';
 import 'package:flutter/material.dart';
 import 'package:storeapp_taks/CountryList.dart';
-import 'package:storeapp_taks/discountcode.dart';
 import 'package:storeapp_taks/hotel_app_theme.dart';
 
 class CoverLogoPage extends StatefulWidget {
@@ -15,77 +14,78 @@ class _MyHomePageState extends State<CoverLogoPage> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-        body: Column(
-          children: <Widget>[
-            getAppBarUI(),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20.0, right: 20.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Add a Cover Photo',
-                    style: TextStyle(fontSize: 35),
-                  )
-                ],
+        body: SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              getAppBarUI(),
+              SizedBox(
+                height: 20,
               ),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, top: 3),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Expanded(
-                    child: Text(
-                      'Add your cover photo of your store here! Make sure your the size should be 320x320',
-                      style: TextStyle(fontSize: 17, color: Colors.grey),
-                    ),
-                  )
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 20.0, right: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Add a Cover Photo',
+                      style: TextStyle(fontSize: 30),
+                    )
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 45,
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: DashedContainer(
-                child: Container(
-                    height: 250.0,
-                    width: 250.0,
-                    decoration: BoxDecoration(shape: BoxShape.rectangle),
-                    child: Icon(
-                      Icons.photo_camera,
-                      size: 120,
-                    )),
-                dashColor: Colors.black,
-                boxShape: BoxShape.rectangle,
-                dashedLength: 30.0,
-                blankLength: 6.0,
-                strokeWidth: 2.0,
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 3),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: <Widget>[
+                    Expanded(
+                      child: Text(
+                        'Add your cover photo of your store here! Make sure your the size should be 320x320',
+                        style: TextStyle(fontSize: 17, color: Colors.grey),
+                      ),
+                    )
+                  ],
+                ),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20, right: 20, top: 3),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Text(
-                    'Add a Cover photo',
-                    style: TextStyle(fontSize: 17, color: Colors.red),
-                  )
-                ],
+              SizedBox(
+                height: 45,
               ),
-            ),
-          ],
+              Align(
+                alignment: Alignment.center,
+                child: DashedContainer(
+                  child: Container(
+                      height: 250.0,
+                      width: 250.0,
+                      decoration: BoxDecoration(shape: BoxShape.rectangle),
+                      child: Icon(
+                        Icons.photo_camera,
+                        size: 120,
+                      )),
+                  dashColor: Colors.black,
+                  boxShape: BoxShape.rectangle,
+                  dashedLength: 30.0,
+                  blankLength: 6.0,
+                  strokeWidth: 2.0,
+                ),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20, top: 3),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Text(
+                      'Add a Cover photo',
+                      style: TextStyle(fontSize: 17, color: Colors.red),
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
-      
         bottomNavigationBar: Padding(
           padding: const EdgeInsets.only(left: 20, right: 25, bottom: 20),
           child: Row(
@@ -112,7 +112,6 @@ class _MyHomePageState extends State<CoverLogoPage> {
             ],
           ),
         ),
-      
       ),
     );
   }

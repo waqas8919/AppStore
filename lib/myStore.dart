@@ -265,7 +265,8 @@ class _MyHomePageState extends State<MyStoreScreen> {
               ),
 
               Padding(
-                padding: const EdgeInsets.only(left: 18.0, right: 18.0),
+                padding: const EdgeInsets.only(
+                    left: 18.0, right: 18.0, bottom: 10.0),
                 child: GestureDetector(
                   onTap: () async {
                     await Navigator.push(

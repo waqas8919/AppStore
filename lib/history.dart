@@ -216,7 +216,7 @@ class _MyHomePageState extends State<HistoryScreen> {
                                     Text(
                                       'Yestarday at 2pm',
                                       style: TextStyle(
-                                          fontSize: 14, color: Colors.white),
+                                          fontSize: 12, color: Colors.white),
                                     )
                                   ],
                                 ),
@@ -372,7 +372,7 @@ class _MyHomePageState extends State<HistoryScreen> {
               Padding(
                 padding: const EdgeInsets.all(18.0),
                 child: Container(
-                    height: 170,
+                    height: 185,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                         color: Colors.white70,

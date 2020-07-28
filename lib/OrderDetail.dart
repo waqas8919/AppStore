@@ -224,7 +224,7 @@ class _MyHomePageState extends State<OrderDetailScreen> {
               padding: EdgeInsets.only(left: 3, top: 0, right: 0, bottom: 0),
               child: Container(
                 width: double.infinity,
-                height: 100,
+                height: 120,
                 child: Container(
                   alignment: Alignment.center,
                   padding:
@@ -310,7 +310,7 @@ class _MyHomePageState extends State<OrderDetailScreen> {
                                             textAlign: TextAlign.left,
                                           ),
                                           Text(
-                                            "Buyers has confirmerd order received",
+                                            "Buyers has confirmerd",
                                             style: TextStyle(
                                                 color: Colors.black54),
                                             textAlign: TextAlign.left,
@@ -331,13 +331,13 @@ class _MyHomePageState extends State<OrderDetailScreen> {
               )),
           Divider(
             height: 5,
-            color: Colors.grey[200],
+            color: Colors.black,
           ),
           Padding(
-              padding: EdgeInsets.only(left: 3, top: 0, right: 0, bottom: 0),
+              padding: EdgeInsets.only(left: 3, top: 10, right: 0, bottom: 0),
               child: Container(
                 width: double.infinity,
-                height: 100,
+                height: 120,
                 child: Container(
                   alignment: Alignment.center,
                   padding:
@@ -423,7 +423,7 @@ class _MyHomePageState extends State<OrderDetailScreen> {
                                             textAlign: TextAlign.left,
                                           ),
                                           Text(
-                                            "Buyers has confirmerd order received",
+                                            "Buyers has confirmerd",
                                             style: TextStyle(
                                                 color: Colors.black54),
                                             textAlign: TextAlign.left,

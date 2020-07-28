@@ -77,7 +77,6 @@ class _MyOrdersState extends State<MyOrders>
                 Tab(
                   child: Container(
                     width: 100,
-                    height: 30,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color:
@@ -95,7 +94,6 @@ class _MyOrdersState extends State<MyOrders>
                 Tab(
                   child: Container(
                     width: 100,
-                    height: 30,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color:
@@ -113,7 +111,6 @@ class _MyOrdersState extends State<MyOrders>
                 Tab(
                   child: Container(
                     width: 100,
-                    height: 30,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color:
@@ -143,276 +140,288 @@ class _MyOrdersState extends State<MyOrders>
   }
 
   Widget OrdersInfo() {
-    return Container(
-      child: Column(
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: Container(
-                height: 220,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                    color: Colors.white70,
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Text(
-                            'ORDER # 1234',
-                            style: TextStyle(fontSize: 19),
-                          ),
-                          Text(
-                            '24 June',
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'Payment Type: ',
-                            style: TextStyle(color: Colors.grey, fontSize: 15),
-                          ),
-                          Text('Card', style: TextStyle(fontSize: 15)),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'Total Amount: ',
-                            style: TextStyle(color: Colors.grey, fontSize: 15),
-                          ),
-                          Text('\$277.0', style: TextStyle(fontSize: 15)),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'Product: ',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 15,
+    return SingleChildScrollView(
+      child: Container(
+        child: Column(
+          children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Container(
+                  height: 250,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      color: Colors.white70,
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              'ORDER # 1234',
+                              style: TextStyle(fontSize: 19),
                             ),
-                          ),
-                          Expanded(
-                              child: Text(
-                                  'milk bottle xl,Nivea Deodorant fresh Active spray',
-                                  style: TextStyle(fontSize: 15))),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          GestureDetector(
-                            onTap: () async {
-                              await Navigator.push(
-                                  context,
-                                  new MaterialPageRoute(
-                                      builder: (context) => ManageShipping()));
-                            },
-                            child: Container(
-                              width: 100,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.green),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Accept",
-                                  textAlign: TextAlign.center,
-                                ),
+                            Text(
+                              '24 June',
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'Payment Type: ',
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 15),
+                            ),
+                            Text('Card', style: TextStyle(fontSize: 15)),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'Total Amount: ',
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 15),
+                            ),
+                            Text('\$277.0', style: TextStyle(fontSize: 15)),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'Product: ',
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 15,
                               ),
                             ),
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              width: 100,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.red),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                            Expanded(
                                 child: Text(
-                                  "Reject",
-                                  textAlign: TextAlign.center,
+                                    'milk bottle xl,Nivea Deodorant fresh Active spray',
+                                    style: TextStyle(fontSize: 15))),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: <Widget>[
+                              GestureDetector(
+                                onTap: () async {
+                                  await Navigator.push(
+                                      context,
+                                      new MaterialPageRoute(
+                                          builder: (context) =>
+                                              ManageShipping()));
+                                },
+                                child: Container(
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Colors.green),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      "Accept",
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              width: 100,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.white),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Details",
-                                  textAlign: TextAlign.center,
+                              GestureDetector(
+                                onTap: () {},
+                                child: Container(
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Colors.red),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      "Reject",
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                )),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(18.0),
-            child: Container(
-                height: 220,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                    color: Colors.white70,
-                    borderRadius: BorderRadius.all(Radius.circular(20))),
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: <Widget>[
-                          Text(
-                            'ORDER # 1234',
-                            style: TextStyle(fontSize: 19),
-                          ),
-                          Text(
-                            '24 June',
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'Payment Type: ',
-                            style: TextStyle(color: Colors.grey, fontSize: 15),
-                          ),
-                          Text('Card', style: TextStyle(fontSize: 15)),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'Total Amount: ',
-                            style: TextStyle(color: Colors.grey, fontSize: 15),
-                          ),
-                          Text('\$277.0', style: TextStyle(fontSize: 15)),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Row(
-                        children: <Widget>[
-                          Text(
-                            'Product: ',
-                            style: TextStyle(
-                              color: Colors.grey,
-                              fontSize: 15,
-                            ),
-                          ),
-                          Expanded(
-                              child: Text(
-                                  'milk bottle xl,Nivea Deodorant fresh Active spray',
-                                  style: TextStyle(fontSize: 15))),
-                        ],
-                      ),
-                      SizedBox(
-                        height: 12,
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: <Widget>[
-                          GestureDetector(
-                            onTap: () async {
-                              await Navigator.push(
-                                  context,
-                                  new MaterialPageRoute(
-                                      builder: (context) => ManageShipping()));
-                            },
-                            child: Container(
-                              width: 100,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.green),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Accept",
-                                  textAlign: TextAlign.center,
+                              GestureDetector(
+                                onTap: () {},
+                                child: Container(
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Colors.grey[200]),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      "Details",
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
                                 ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  )),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Container(
+                  height: 250,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      color: Colors.white70,
+                      borderRadius: BorderRadius.all(Radius.circular(20))),
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Column(
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                            Text(
+                              'ORDER # 1234',
+                              style: TextStyle(fontSize: 19),
+                            ),
+                            Text(
+                              '24 June',
+                              style: TextStyle(color: Colors.grey),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'Payment Type: ',
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 15),
+                            ),
+                            Text('Card', style: TextStyle(fontSize: 15)),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'Total Amount: ',
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 15),
+                            ),
+                            Text('\$277.0', style: TextStyle(fontSize: 15)),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+                        Row(
+                          children: <Widget>[
+                            Text(
+                              'Product: ',
+                              style: TextStyle(
+                                color: Colors.grey,
+                                fontSize: 15,
                               ),
                             ),
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              width: 100,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.red),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
+                            Expanded(
                                 child: Text(
-                                  "Reject",
-                                  textAlign: TextAlign.center,
+                                    'milk bottle xl,Nivea Deodorant fresh Active spray',
+                                    style: TextStyle(fontSize: 15))),
+                          ],
+                        ),
+                        SizedBox(
+                          height: 12,
+                        ),
+                        SingleChildScrollView(
+                          scrollDirection: Axis.horizontal,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: <Widget>[
+                              GestureDetector(
+                                onTap: () async {
+                                  await Navigator.push(
+                                      context,
+                                      new MaterialPageRoute(
+                                          builder: (context) =>
+                                              ManageShipping()));
+                                },
+                                child: Container(
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Colors.green),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      "Accept",
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          ),
-                          GestureDetector(
-                            onTap: () {},
-                            child: Container(
-                              width: 100,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(20),
-                                  color: Colors.white),
-                              child: Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Details",
-                                  textAlign: TextAlign.center,
+                              GestureDetector(
+                                onTap: () {},
+                                child: Container(
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Colors.red),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      "Reject",
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
                                 ),
                               ),
-                            ),
-                          )
-                        ],
-                      ),
-                    ],
-                  ),
-                )),
-          )
-        ],
+                              GestureDetector(
+                                onTap: () {},
+                                child: Container(
+                                  width: 100,
+                                  decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(20),
+                                      color: Colors.grey[200]),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      "Details",
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ),
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  )),
+            )
+          ],
+        ),
       ),
     );
   }
