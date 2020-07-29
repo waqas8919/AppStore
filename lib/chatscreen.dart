@@ -33,6 +33,7 @@ class _MyChatState extends State<MyChatScreen> {
           elevation: 0.0,
           title: Text('Alex'),
           leading: GestureDetector(
+            
             onTap: () {
               Navigator.pop(context);
             },
